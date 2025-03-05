@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css">
+   <!-- Font Awesome CSS -->
+   <link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css">
+   <!-- Template CSS -->
+   <link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/css/styles.verde.min.css">
+   <link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/css/custom.css">
+   <title>Video e imágenes</title>
+</head><body><div class="container-fluid">
+<div class="row">
+<div class="col-12 banner-img">
+<p><img src="/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/img/banner_02_verde.png" alt="banner"></p>
+</div>
+<div class="col-sm-10 offset-sm-1">
+<h1>Laboratorio 1</h1>
+<div class="video-wrapper">
+<div class="video-text">Video <a href="https://ujaverianacali.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2ad27098-0381-4dde-ae0b-ac15015d4387&amp;start=0" target="_blank" rel="noopener">Introducción a Oracle</a></div>
+<div class="video-text">Video <a href="https://ujaverianacali.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=43640b83-f5f7-459f-9f79-ac1d0110a1c5&amp;start=0" target="_blank" rel="noopener">Create Table</a></div>
+</div>
+</div>
+<div class="col-sm-10 offset-sm-1">
+<p style="text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;">Este laboratorio tiene <span style="color: #4a8f00;"><strong>dos partes</strong></span>, la primera busca que los estudiantes se familiaricen con el ambiente de desarrollo que se va a usar en las sesiones prácticas del curso, en la segunda parte se realizará la creación de las tablas del caso transversal.</span></p>
+<h1 style="text-align: left;"><span style="color: #4a8f00; font-size: 32px;">Primera Parte</span></h1>
+<p style="text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;">En esta primera parte se realizará la conexión al servidor Oracle y se ejecutarán algunos comandos que permiten visualizar algunas características del sistema gestor.</span></p>
+<p style="text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"></p>
+<p style="text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;">Las prácticas se pueden realizar usando&nbsp;<b><span style="color: #0a775b;">SQL Developer</span></b>, una interfaz gráfica para la conexión a la base de datos. Si desea usarla desde su computador, puede instalarla, es de uso libre. Para conectarse al servidor Oracle use la guía <b><span style="color: #0a775b;"><a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=255461&amp;type=content&amp;rcode=3DD214ED-5CEF-4D53-8AAA-879627930DB4-1522449" target="_blank" rel="noopener">Manual Conexión a la Base de Datos SVRING1</a></span></b>.&nbsp;Una vez tenga la conexión continúe siguiendo esta guía.</span></p>
+<p style="text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"></span></p>
+<p style="text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"></p>
+<p style="margin: 0cm 0cm 8pt; line-height: 107%; font-size: 16pt; font-family: Calibri, sans-serif; color: #005ec3; background: white; font-weight: bold;"><span style="font-size: 19px;"><strong><span style="color: #8ad934; font-size: 24px;">Consultando el Diccionario de la BD</span></strong><span style="color: #0a775b;"> </span></span></p>
+<p style="text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;">Ejecute las siguientes consultas, las consultas tienen la forma:&nbsp; <b><span style="color: #0a775b;">SELECT a1, a<sub>2</sub>, … a<sub>k</sub> FROM tabla; </span></b>donde <span style="color: #027a21;"><strong>a1, a<sub>2</sub>, … a</strong></span><sub><span style="color: #027a21;"><strong>k</strong></span><b> </b></sub>son los atributos o propiedades cuyos<b><sub><span style="color: #0a775b;"> </span></sub></b>datos (valores)<b><sub><span style="color: #0a775b;"> </span></sub></b>queremos ver y <b><span style="color: #0a775b;">tabla</span></b>, la tabla donde esos atributos están. Las tablas que consultaremos tienen <span style="color: #027a21;"><strong>metadatos </strong></span>del sistema y hacen parte del catálogo del SGBD.</span></p>
+<p style="margin: 0cm 0cm 0.0001pt 36pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;">&nbsp;</span></p>
+<ol style="margin-bottom: 0cm; margin-top: 0px;">
+<li style="margin: 0cm 0cm 0.0001pt 0.4px; font-size: 19px; font-family: Calibri, sans-serif; text-indent: 0.4px;"><span style="font-size: 19px;">Comando que le permite saber cuál base de datos está usando</span></li>
+</ol>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">SELECT ora_database_name FROM dual;</span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">&nbsp;</span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 36pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;">De la manera similar, puede seleccionar el usuario<span style="color: #aa610d; border: none windowtext 1.0pt; padding: 0cm;"> </span>actual o la fecha del sistema:</span></p>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">SELECT user FROM dual;</span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">SELECT current_date FROM dual;</span></b></span><span style="font-size: 19px;"><b><span style="color: #0a775b;"></span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;"></span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;"><span style="color: #8ad934;">Nota:</span> </span></b><span style="color: #494c4e;">"Dual es una tabla creada automáticamente por Oracle Database, es accesible a todos los usuarios. Tiene una columna, DUMMY, definida como VARCHAR2(1), y contiene una fila con un valor X. La tabla DUAL es útil para calcular una expresión constante con la sentencia SELECT." (<span style="color: #8ad934;">Oracle, SQL Language Reference-Selecting from the DUAL table</span>)</span></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #6c6734;">&nbsp;</span></b></span></p>
+<ol start="2" style="margin-bottom: 0cm; margin-top: 0px;">
+<li style="margin: 0cm 0cm 0.0001pt 0.4px; font-size: 19px; font-family: Calibri, sans-serif; text-indent: 0.4px;"><span style="font-size: 19px;">Comando que le permite saber cuál es la versión de Oracle:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+</ol>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">SELECT * FROM v$version;</span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 36pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;">&nbsp;</span></p>
+<ol start="3" style="margin-bottom: 0cm; margin-top: 0px;">
+<li style="margin: 0cm 0cm 0.0001pt 0.4px; font-size: 19px; font-family: Calibri, sans-serif; text-indent: 0.4px;"><span style="font-size: 19px;">Comandos para consultar usuarios:</span></li>
+</ol>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">SELECT * FROM ALL_USERS; </span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">SELECT * FROM USER_USERS;</span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;"></span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;"><span style="font-size: 19px;"><span style="color: #0a775b;"><span style="color: #8ad934;">Nota:</span> </span></span></span></b><span style="color: #0a775b;"><span style="font-size: 19px;"><span style="color: #494c4e;">"ALL_USERS lista los usuarios de la base de datos visibles para el usuario actual. USER_USERS describe el usuario actual, tiene más columnas que ALL_USERS."</span></span></span><b><span style="color: #0a775b;"><span style="font-size: 19px;"><span style="color: #494c4e;"> </span></span></span></b><span style="color: #0a775b;"><span style="font-size: 19px;"><span style="color: #494c4e;">(<span style="color: #8ad934;">Oracle, Database Reference-ALL_USERS</span>)</span></span></span></span><span style="font-size: 19px;"><span style="font-family: Calibri, sans-serif; color: windowtext;"><span style="color: #2f5e00;"><strong></strong></span></span></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 36pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;">&nbsp;</span></p>
+<ol start="4" style="margin-bottom: 0cm; margin-top: 0px;">
+<li style="margin: 0cm 0cm 0.0001pt 0.4px; font-size: 19px; font-family: Calibri, sans-serif; text-indent: 0.4px;"><span style="font-size: 19px;">Comando para consultar datos de las tablas a las que el usuario tiene acceso:</span></li>
+</ol>
+<p style="margin: 0cm 0cm 0.0001pt 72pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">SELECT owner, table_name, tablespace_name, num_rows, blocks FROM ALL_TABLES;&nbsp;</span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 36pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><span style="border: 1pt none windowtext; padding: 0cm;">Referencia: </span><a href="https://docs.oracle.com/en/database/oracle/oracle-database/21/refrn/ALL_TABLES.html#GUID-6823CD28-0681-468E-950B-966C6F71325D" style="color: #2998e3; text-decoration: underline;">https://docs.oracle.com/en/database/oracle/oracle-database/21/refrn/ALL_TABLES.html#GUID-6823CD28-0681-468E-950B-966C6F71325D</a></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 36pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;">&nbsp;</span></p>
+<ol start="5" style="margin-bottom: 0cm; margin-top: 0px;">
+<li style="margin: 0cm 0cm 0.0001pt 0.4px; font-size: 19px; font-family: Calibri, sans-serif; text-indent: 0.4px;"><span style="font-size: 19px;">Comando para consultar <span style="border: none windowtext 1.0pt; padding: 0cm;">los roles que tiene asignados:</span></span></li>
+</ol>
+<p style="margin: 0cm 0cm 0.0001pt 70.8pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">SELECT * FROM USER_ROLE_PRIVS; </span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 36pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="border: 1pt none windowtext; padding: 0cm; font-size: 19px;">&nbsp;</span></p>
+<ol start="6" style="margin-bottom: 0cm; margin-top: 0px;">
+<li style="margin: 0cm 0cm 0.0001pt 0.4px; font-size: 19px; font-family: Calibri, sans-serif; text-indent: 0.4px;"><span style="font-size: 19px;">Use el siguiente comando para crear la tabla Ciudad</span></li>
+</ol>
+<p style="text-align: justify; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif; padding-left: 80px;"><span style="font-size: 19px;">&nbsp;</span><span style="font-size: 19px;"><b><span style="color: #0a775b;">CREATE TABLE pais (<br>&nbsp; &nbsp; codPais NUMBER(3) PRIMARY KEY,<br>&nbsp; &nbsp; nombrePais VARCHAR2(15) NOT NULL );</span></b></span><span style="font-size: 19px;"><b><span style="color: #0a775b;"></span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="border: 1pt none windowtext; padding: 0cm; font-size: 19px;">&nbsp;</span></p>
+<ol start="7" style="margin-bottom: 0cm; margin-top: 0px;">
+<li style="margin: 0cm 0cm 0.0001pt 0.4px; font-size: 19px; font-family: Calibri, sans-serif; text-indent: 0.4px;"><span style="font-size: 19px;">Intercambie con un compañer@ permisos sobre su tabla ciudad (cada uno le da privilegios sobre su tabla al usuario del otro. Recuerde cambiar el DATABASEXX por el usuario de su compañero)</span></li>
+</ol>
+<p style="margin: 0cm 0cm 0.0001pt 108pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">GRANT INSERT, UPDATE, DELETE, SELECT ON pais TO DATABASEXX;</span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 108pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="color: #aa610d; border: 1pt none windowtext; padding: 0cm; font-size: 19px;">&nbsp;</span></p>
+<ol start="8" style="margin-bottom: 0cm; margin-top: 0px;">
+<li style="margin: 0cm 0cm 0.0001pt 0.4px; font-size: 19px; font-family: Calibri, sans-serif; text-indent: 0.4px;"><span style="font-size: 19px;">Inserte datos en la tabla de su compañero con el siguiente comando:</span></li>
+</ol>
+<p style="margin: 0cm 0cm 0.0001pt 108pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">INSERT INTO DATABASEXX.pais VALUES (</span></b><span style="color: #0a775b;">&lt;codigo&gt;<b>, </b>&lt;nombre&gt;<b>);</b></span></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 35.4pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="border: 1pt none windowtext; padding: 0cm; font-size: 19px;">Reemplace &lt;codigo&gt; y &lt;nombre&gt; por alguno de las siguientes parejas:</span></p>
+<div align="center">
+<table cellpadding="0" cellspacing="0" border="1" class="MsoTable15Grid4Accent6" style="width: 135.05pt; border-collapse: collapse; border: none; height: 210px;">
+<tbody>
+<tr style="height: 30px;">
+<td valign="top" nowrap="nowrap" style="width: 58.65pt; border: solid #94A088 1.0pt; border-right: none; background: #94A088; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="font-family: Arial, sans-serif; color: white;">codigo</span></b></span></p>
+</td>
+<td valign="top" nowrap="nowrap" style="width: 76.4pt; border: solid #94A088 1.0pt; border-left: none; background: #94A088; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="font-family: Arial, sans-serif; color: white;">nombre</span></b></span></p>
+</td>
+</tr>
+<tr style="height: 30px;">
+<td valign="top" nowrap="nowrap" style="width: 58.65pt; border: solid #BEC6B7 1.0pt; border-top: none; background: #E9ECE7; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">169</span></p>
+</td>
+<td valign="top" nowrap="nowrap" style="width: 76.4pt; border-top: none; border-left: none; border-bottom: solid #BEC6B7 1.0pt; border-right: solid #BEC6B7 1.0pt; background: #E9ECE7; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">Colombia</span></p>
+</td>
+</tr>
+<tr style="height: 30px;">
+<td valign="top" nowrap="nowrap" style="width: 58.65pt; border: solid #BEC6B7 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">249</span></p>
+</td>
+<td valign="top" nowrap="nowrap" style="width: 76.4pt; border-top: none; border-left: none; border-bottom: solid #BEC6B7 1.0pt; border-right: solid #BEC6B7 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">Estados Unidos</span></p>
+</td>
+</tr>
+<tr style="height: 30px;">
+<td valign="top" nowrap="nowrap" style="width: 58.65pt; border: solid #BEC6B7 1.0pt; border-top: none; background: #E9ECE7; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">063</span></p>
+</td>
+<td valign="top" nowrap="nowrap" style="width: 76.4pt; border-top: none; border-left: none; border-bottom: solid #BEC6B7 1.0pt; border-right: solid #BEC6B7 1.0pt; background: #E9ECE7; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">Argentina</span></p>
+</td>
+</tr>
+<tr style="height: 30px;">
+<td valign="top" nowrap="nowrap" style="width: 58.65pt; border: solid #BEC6B7 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">105</span></p>
+</td>
+<td valign="top" nowrap="nowrap" style="width: 76.4pt; border-top: none; border-left: none; border-bottom: solid #BEC6B7 1.0pt; border-right: solid #BEC6B7 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">Brasil</span></p>
+</td>
+</tr>
+<tr style="height: 30px;">
+<td valign="top" nowrap="nowrap" style="width: 58.65pt; border: solid #BEC6B7 1.0pt; border-top: none; background: #E9ECE7; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">275</span></p>
+</td>
+<td valign="top" nowrap="nowrap" style="width: 76.4pt; border-top: none; border-left: none; border-bottom: solid #BEC6B7 1.0pt; border-right: solid #BEC6B7 1.0pt; background: #E9ECE7; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">Francia</span></p>
+</td>
+</tr>
+<tr style="height: 30px;">
+<td valign="top" nowrap="nowrap" style="width: 58.65pt; border: solid #BEC6B7 1.0pt; border-top: none; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">023</span></p>
+</td>
+<td valign="top" nowrap="nowrap" style="width: 76.4pt; border-top: none; border-left: none; border-bottom: solid #BEC6B7 1.0pt; border-right: solid #BEC6B7 1.0pt; padding: 0cm 5.4pt 0cm 5.4pt;">
+<p style="text-align: center; margin: 0cm 0cm 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px; font-family: Arial, sans-serif;">Alemania</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 0cm 0cm 0.0001pt 18pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;">&nbsp;</span></p>
+<ol start="9" style="margin-bottom: 0cm; margin-top: 0px;">
+<li style="margin: 0cm 0cm 0.0001pt 0.4px; font-size: 19px; font-family: Calibri, sans-serif; text-indent: 0.4px;"><span style="font-size: 19px;">Ejecute el comando <b><span style="color: #0a775b;">COMMIT;</span></b>&nbsp; (para comprometer los datos, y que su compañero pueda verlos)</span></li>
+</ol>
+<p style="margin: 0cm 0cm 0.0001pt 35.4pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="border: 1pt none windowtext; padding: 0cm; font-size: 19px;">&nbsp;</span></p>
+<ol start="10" style="margin-bottom: 0cm; margin-top: 0px;">
+<li style="margin: 0cm 0cm 0.0001pt 0.4px; font-size: 19px; font-family: Calibri, sans-serif; text-indent: 0.4px;"><span style="font-size: 19px;">Consulte los datos de sus ciudades y de las ciudades de su compañero usando los siguientes comandos:</span></li>
+</ol>
+<p style="margin: 0cm 0cm 0.0001pt 108pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">SELECT * FROM DATABASEXX.Pais;</span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 108pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="font-size: 19px;"><b><span style="color: #0a775b;">SELECT * FROM Pais;</span></b></span></p>
+<p style="margin: 0cm 0cm 0.0001pt 108pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="color: #aa610d; border: 1pt none windowtext; padding: 0cm; font-size: 19px;">&nbsp;</span></p>
+<ol start="11" style="margin-bottom: 0cm; margin-top: 0px;">
+<li style="margin: 0cm 0cm 0.0001pt 0.4px; font-size: 19px; font-family: Calibri, sans-serif; text-indent: 0.4px;"><span style="font-size: 19px;">Observe la información relacionada con esa tabla en USER_TABLES, TABLE_PRIVILEGES, USER_CATALOG, USER_OBJECTS, ALL_TAB_COLS, USER_TAB_COLUMNS</span></li>
+</ol>
+<p style="margin: 0cm 0cm 0.0001pt 36pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="border: none windowtext 1.0pt; padding: 0cm;">&nbsp;</span></p>
+<p style="margin: 0cm 0cm 0.0001pt 36pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="border: none windowtext 1.0pt; padding: 0cm;"></span></p>
+<h1 style="text-align: left;"><span style="color: #4a8f00; font-size: 32px;">Segunda Parte</span></h1>
+<div>
+<div></div>
+</div>
+<p>En la segunda parte de este laboratorio usaremos la sentencia <strong><span style="color: #4a8f00;">CREATE TABLE</span></strong> para crear las tablas del esquema que vamos a usar en las sesiones prácticas del curso.</p>
+<p><span style="font-size: 24px;"><strong><span style="color: #8ad934;">Preliminares&nbsp;</span></strong></span></p>
+<p>En algunos laboratorios se presentará una versión básica (simplificada) de la sintaxis de los comandos que se van a aplicar.&nbsp;Para describir la sintaxis de esos comandos se usarán las siguientes convenciones tipográficas:</p>
+<ul>
+<li>La cursiva y negrita (<strong><em>ejemplo</em></strong>) indica marcadores de posición; son palabras que se deben reemplazar según las definiciones que se dan para cada caso</li>
+<li>Los elementos entre corchetes (&nbsp;[ ejemplo ]&nbsp;) son opcionales</li>
+<li>Las llaves y las líneas verticales&nbsp; indican que debe elegir una alternativa (&nbsp;{ ejemplo | otro }&nbsp;)</li>
+<li>Los puntos (&nbsp;...&nbsp;) significan que el elemento precedente se repite (si los puntos están entre corchetes, la repetición es opcional)</li>
+</ul>
+<p><strong>&nbsp;</strong></p>
+<p><span style="font-size: 24px;"><strong><span style="color: #8ad934;">CREATE TABLE&nbsp;</span></strong></span></p>
+<p>La sintaxis simplificada de la sentencia <span style="color: #4a8f00;">CREATE TABLE</span>, se muestra a continuación.</p>
+<div>
+<p><span style="font-family: 'courier new', courier, sans-serif;">CREATE [GLOBAL TEMPORARY] TABLE [<strong><em>schema.</em></strong>]<strong><em>table</em></strong></span></p>
+<p><span style="font-family: 'courier new', courier, sans-serif;">&nbsp;( {&nbsp;<strong><em>column</em></strong>&nbsp;<strong><em>data_type</em></strong>&nbsp;[<strong><em>inline_constraint</em></strong>&nbsp;[ ... ]&nbsp;] |&nbsp;<strong><em>table_constraint</em></strong> }[, ... ] )</span></p>
+<p><span style="font-family: 'courier new', courier, sans-serif;"><strong><em>schema</em></strong>&nbsp;</span>es el nombre del esquema al que pertenece la tabla</p>
+<p><span style="font-family: 'courier new', courier, sans-serif;"><strong><em>table&nbsp;</em></strong></span>es el nombre de la tabla</p>
+<p><span style="font-family: 'courier new', courier, sans-serif;"><strong><em>column</em></strong>&nbsp;</span>es el nombre de la columna</p>
+<p><span style="font-family: 'courier new', courier, sans-serif;"><strong><em>data_type&nbsp;</em></strong></span>es el tipo de dato (dominio) de la columna.</p>
+<p><span style="font-family: 'courier new', courier, sans-serif;"><strong><em>inline_constraint</em></strong></span>&nbsp;permite definir reglas de integridad&nbsp;como parte de la definición de la columna.&nbsp;Éstas reglas pueden ser:</p>
+<p><span style="font-family: 'courier new', courier, sans-serif;">&nbsp;[ { NOT NULL |&nbsp; CHECK (&nbsp;<strong><em>expression</em></strong>&nbsp;) |&nbsp; DEFAULT&nbsp;<strong><em>default_expr</em></strong> | </span><span style="font-family: 'courier new', courier, sans-serif;">UNIQUE &nbsp;&nbsp;|&nbsp; </span></p>
+<p><span style="font-family: 'courier new', courier, sans-serif;">&nbsp; &nbsp; &nbsp;PRIMARY KEY | </span><span style="font-family: 'courier new', courier, sans-serif;">REFERENCES [<strong><em>refschema.</em></strong>]<strong><em>reftable</em></strong>&nbsp;[(&nbsp;<strong><em>refcolumn</em></strong>&nbsp;)][ON DELETE</span></p>
+<p><span style="font-family: 'courier new', courier, sans-serif;">&nbsp; &nbsp; {CASCADE|SET NULL} ] } ]</span></p>
+<p>&nbsp;<span style="font-family: 'courier new', courier, sans-serif;"><strong><em>table_constraint</em></strong></span>&nbsp;permite definir reglas de integridad que involucran varias columnas.&nbsp;Éstas reglas pueden ser:</p>
+<p><span style="font-family: 'courier new', courier, sans-serif;">{ CHECK (&nbsp;<strong><em>expression</em></strong>&nbsp;) |&nbsp; UNIQUE (&nbsp;<strong><em>column</em></strong>&nbsp;[, ... ] ) |</span></p>
+<p><span style="font-family: 'courier new', courier, sans-serif;">&nbsp; PRIMARY KEY (&nbsp;<strong><em>column</em></strong>&nbsp;[, ... ] ) |</span></p>
+<p><span style="font-family: 'courier new', courier, sans-serif;">&nbsp; FOREIGN KEY (&nbsp;<strong><em>column</em></strong>&nbsp;[, ... ]&nbsp;) REFERENCES&nbsp;<strong><em>reftable</em></strong>&nbsp;[ (&nbsp;<strong><em>refcolumn</em></strong>&nbsp;[, ... ] ) ]</span></p>
+<p><span style="font-family: 'courier new', courier, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ ON DELETE {CASCADE|SET NULL} ] }</span></p>
+<p><span style="font-family: 'courier new', courier, sans-serif;"><strong><em>expression</em></strong>&nbsp;</span>es una expresión que retorna un valor booleano</p>
+<p><strong><em><span style="font-family: 'courier new', courier, sans-serif;">default_expr</span>&nbsp;</em></strong>es un valor que se asigna a la columna cuando se inserta un registro que no provee ese valor. La expresión puede ser un valor literal, una función, o el llamado a una función (ej.&nbsp;SYSDATE)</p>
+<p><span style="font-family: 'courier new', courier, sans-serif;"><strong><em>reftable</em></strong></span>,<strong><em>&nbsp;<span style="font-family: 'courier new', courier, sans-serif;">refcolumn</span></em></strong>,<strong><em>&nbsp;<span style="font-family: 'courier new', courier, sans-serif;">refschema&nbsp;</span></em></strong>son, respectivamente, los nombres de la tabla y columna a la que hace referencia, y del esquema donde está la tabla</p>
+</div>
+<p><span style="font-size: 20px;"><strong><span style="color: #8ad934;">Ejemplo de CREATE TABLE</span></strong></span></p>
+<p>Dado el siguiente modelo relacional:</p>
+<p><img style="height: auto;" data-d2l-editor-default-img-style="true" title="" alt="" src="/content/enforced/139930-UGRD%3B300CID001%3BA%3B20231/ejemplo-lab2.png?ou=203376">&nbsp;</p>
+<p>Los siguientes comandos crean las tablas Persona y Vehículo:</p>
+<p><span style="font-family: 'courier new', courier, sans-serif;">CREATE TABLE persona (</span></p>
+<p style="padding-left: 40px;"><span style="font-family: 'courier new', courier, sans-serif;">&nbsp; &nbsp;cc NUMBER(10) PRIMARY KEY,</span></p>
+<p style="padding-left: 40px;"><span style="font-family: 'courier new', courier, sans-serif;">&nbsp; &nbsp;nombre VARCHAR2(50) NOT NULL);</span></p>
+<p><span style="font-family: 'courier new', courier, sans-serif;">CREATE TABLE vehiculo (</span></p>
+<p style="padding-left: 80px;"><span style="font-family: 'courier new', courier, sans-serif;">nroPlaca VARCHAR2(6)PRIMARY KEY,</span></p>
+<p style="padding-left: 80px;"><span style="font-family: 'courier new', courier, sans-serif;">modelo NUMBER(4) NOT NULL CHECK (modelo &gt; 1950),</span></p>
+<p style="padding-left: 80px;"><span style="font-family: 'courier new', courier, sans-serif;">ccPropietario NUMBER(10) REFERENCES persona );</span></p>
+<p>&nbsp;</p>
+<p>Los tipos de datos se pueden consultar en:&nbsp;<a rel="noopener" target="_blank" href="https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html#GUID-7B72E154-677A-4342-A1EA-C74C1EA928E6">SQL Language Reference - Data types</a><a href="https://docs.oracle.com/cd/B28359_01/server.111/b28318/datatype.htm#CNCPT012"></a></p>
+<p>Las restricciones de integridad se pueden consultar en:&nbsp;<a rel="noopener" target="_blank" href="https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/constraint.html#GUID-1055EA97-BA6F-4764-A15F-1024FD5B6DFE">SQL Languaje Reference - Constraint</a></p>
+<p></p>
+<p><span style="font-size: 24px;"><strong><span style="color: #8ad934;">Dominio de Aplicación de las Prácticas del&nbsp; Curso&nbsp;</span></strong></span></p>
+<p>En las sesiones prácticas usaremos el <a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=255461&amp;type=content&amp;rcode=3DD214ED-5CEF-4D53-8AAA-879627930DB4-1545552" target="_blank" rel="noopener">Caso Transversal - Gestión de ventas en una tienda virtual</a>. La siguiente figura muestra el&nbsp;<strong><span style="color: #4a8f00;">modelo relacional</span>&nbsp;</strong>que se ha diseñado para éste caso.&nbsp;</p>
+<p><img src="/content/enforced/255461-UGRD%3B300CID001%3BA%3B20251/MRelacional-draw.jpg" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></p>
+<p><span style="color: #8ad934;"><strong>Nota:</strong></span> a propósito, algunos atributos y restricciones no se han incluido o se han modificado ya que se agregarán más adelante usando la cláusula&nbsp;<span style="color: #4a8f00;">ALTER TABLE</span>.</p>
+<p><span style="font-size: 24px;"><strong><span style="color: #8ad934;">Ejercicios del Laboratorio</span></strong></span></p>
+<p>1.&nbsp; Cree cada una de las tablas del modelo del caso de aplicación (figura anterior).&nbsp;</p>
+<p style="padding-left: 40px;">Como resultado tendrá un script con los comandos de creación de las tablas que debe ser entregado.</p>
+<p style="padding-left: 40px;"><span style="color: #4a8f00;"><strong>Referencias</strong></span>: Manual de Oracle. En línea:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>&nbsp;<a rel="noopener" target="_blank" href="https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/CREATE-TABLE.html#GUID-F9CE0CC3-13AE-4744-A43C-EAC7A71AAAB6">SQL Language Reference - Create table</a></li>
+<li><a href="https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html#GUID-7B72E154-677A-4342-A1EA-C74C1EA928E6" target="_blank" rel="noopener">SQL Languaje Reference - Data Types</a></li>
+<li><a href="https://docs.oracle.com/en/database/other-databases/nosql-database/23.3/sqlreferencefornosql/creating-tables-identity-column.html" target="_blank" rel="noopener">SQL Reference Guide - Identity Columns</a></li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;2.&nbsp; Una vez haya creado las tablas lleve su modelo al <span style="color: #027a21;"><strong>Data Modeler</strong></span> de Oracle SQL Developer, así:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Elija en el menú: <span style="color: #027a21;">Archivo </span>–<span style="color: #027a21;"> Data modeler </span>-<span style="color: #027a21;"> Importar</span> - <span style="color: #027a21;">Diccionario de Datos</span></li>
+<li>Elija la conexión</li>
+<li>Marque su esquema (DATABASEXX)</li>
+<li>Seleccione las tablas</li>
+<li>Genere el diseño.&nbsp;</li>
+<li>Para ver el diseño, abra la ventana del explorador del data modeler (menú <span style="color: #027a21;">Ver</span> – <span style="color: #027a21;">Data modeler </span>– <span style="color: #027a21;">Explorador</span>). Aparecerá el navegador al lado izquierdo, busque entre los modelos relacionales el modelo que fue importado, dele click derecho y seleccione "<span style="color: #027a21;">Mostrar</span>".</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;<span style="font-size: 24px;"><strong><span style="color: #8ad934;">Entregables&nbsp;</span></strong></span></p>
+<ol>
+<li>Subir el script con los comandos y el gráfico del Data Modeler en&nbsp; <a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=255461&amp;type=dropbox&amp;rcode=3DD214ED-5CEF-4D53-8AAA-879627930DB4-893429" target="_self" style="font-size: 24px; background-color: #ffffff;">Entrega Laboratorio 1</a></li>
+<li>Las tablas deben estar creadas en su esquema del motor Oracle del curso (en SVRING1)</li>
+</ol>
+<p style="margin: 0cm 0cm 0.0001pt 36pt; font-size: 12pt; font-family: Calibri, sans-serif;"><span style="border: none windowtext 1.0pt; padding: 0cm;"></span></p>
+</div>
+<div class="col-12"><footer></footer></div>
+</div>
+</div>
+<p>
+<script src="/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/thirdpartylib/jquery/jquery-3.3.1.slim.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/thirdpartylib/popper-js/popper.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+</p>
+<!-- Template JavaScript -->
+<p>
+<script src="/shared/HTML-Template-Library/HTML-Templates-V3/pages/../_assets/js/scripts.min.js"></script>
+</p></body></html>
