@@ -1,0 +1,106 @@
+
+SQL*Loader: Release 23.0.0.0.0 - Production on Wed Mar 5 12:42:17 2025
+Version 23.7.0.25.01
+
+Copyright (c) 1982, 2025, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   tema.ctl
+Data File:      temas.csv
+  File processing option string: "str '\r\n'"
+  Bad File:     tema.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table TEMA, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+COD_TEMA                            FIRST     *   ,  O(") CHARACTER            
+NOMBRE                               NEXT   100   ,  O(") CHARACTER            
+
+Record 1: Rejected - Error on table TEMA, column COD_TEMA.
+ORA-01722: unable to convert string value containing 'c' to a number: 
+ORA-03302: (ORA-01722 details) invalid string value: codtema;nombre
+Help: https://docs.oracle.com/error-help/db/ora-01722/
+
+Record 2: Rejected - Error on table TEMA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011968) violated on table DATABASE20.TEMA columns (COD_TEMA)
+ORA-03301: (ORA-00001 details) row with column values (COD_TEMA:1) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 3: Rejected - Error on table TEMA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011968) violated on table DATABASE20.TEMA columns (COD_TEMA)
+ORA-03301: (ORA-00001 details) row with column values (COD_TEMA:2) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 4: Rejected - Error on table TEMA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011968) violated on table DATABASE20.TEMA columns (COD_TEMA)
+ORA-03301: (ORA-00001 details) row with column values (COD_TEMA:3) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 5: Rejected - Error on table TEMA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011968) violated on table DATABASE20.TEMA columns (COD_TEMA)
+ORA-03301: (ORA-00001 details) row with column values (COD_TEMA:4) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 6: Rejected - Error on table TEMA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011968) violated on table DATABASE20.TEMA columns (COD_TEMA)
+ORA-03301: (ORA-00001 details) row with column values (COD_TEMA:5) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 7: Rejected - Error on table TEMA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011968) violated on table DATABASE20.TEMA columns (COD_TEMA)
+ORA-03301: (ORA-00001 details) row with column values (COD_TEMA:6) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 8: Rejected - Error on table TEMA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011968) violated on table DATABASE20.TEMA columns (COD_TEMA)
+ORA-03301: (ORA-00001 details) row with column values (COD_TEMA:7) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 9: Rejected - Error on table TEMA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011968) violated on table DATABASE20.TEMA columns (COD_TEMA)
+ORA-03301: (ORA-00001 details) row with column values (COD_TEMA:8) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 10: Rejected - Error on table TEMA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011968) violated on table DATABASE20.TEMA columns (COD_TEMA)
+ORA-03301: (ORA-00001 details) row with column values (COD_TEMA:9) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 11: Rejected - Error on table TEMA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011968) violated on table DATABASE20.TEMA columns (COD_TEMA)
+ORA-03301: (ORA-00001 details) row with column values (COD_TEMA:10) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+
+Table TEMA:
+  0 Rows successfully loaded.
+  11 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  90000 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:            11
+Total logical records rejected:        11
+Total logical records discarded:        0
+
+Run began on Wed Mar 05 12:42:17 2025
+Run ended on Wed Mar 05 12:42:28 2025
+
+Elapsed time was:     00:00:11.42
+CPU time was:         00:00:00.07

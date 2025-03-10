@@ -1,0 +1,167 @@
+
+SQL*Loader: Release 23.0.0.0.0 - Production on Wed Mar 5 13:32:59 2025
+Version 23.7.0.25.01
+
+Copyright (c) 1982, 2025, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   prodCompra.ctl
+Data File:      prodCompra.csv
+  Bad File:     prodCompra.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table PROD_COMPRA, loaded from every logical record.
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+COD_USUARIO                         FIRST     *   ;       CHARACTER            
+NRO_COMPRA                           NEXT     *   ;       CHARACTER            
+COD_PRODUCTO                         NEXT     *   ;       CHARACTER            
+PRECIO_UNITARIO                      NEXT     *   ;       CHARACTER            
+CANTIDAD                             NEXT     *   ;       CHARACTER            
+
+Record 1: Rejected - Error on table PROD_COMPRA, column COD_USUARIO.
+ORA-01722: unable to convert string value containing 'u' to a number: 
+ORA-03302: (ORA-01722 details) invalid string value: usuario
+Help: https://docs.oracle.com/error-help/db/ora-01722/
+
+Record 1270: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:1, NRO_COMPRA:6, COD_PRODUCTO:115) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1271: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:2, NRO_COMPRA:1, COD_PRODUCTO:115) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1272: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:2, NRO_COMPRA:2, COD_PRODUCTO:115) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1273: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:2, NRO_COMPRA:3, COD_PRODUCTO:115) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1282: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:3, NRO_COMPRA:2, COD_PRODUCTO:116) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1283: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:3, NRO_COMPRA:3, COD_PRODUCTO:116) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1299: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:5, NRO_COMPRA:4, COD_PRODUCTO:118) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1300: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:5, NRO_COMPRA:5, COD_PRODUCTO:118) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1309: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:7, NRO_COMPRA:1, COD_PRODUCTO:119) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1318: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:7, NRO_COMPRA:10, COD_PRODUCTO:120) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1319: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:8, NRO_COMPRA:1, COD_PRODUCTO:120) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1320: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:8, NRO_COMPRA:2, COD_PRODUCTO:120) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1321: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:8, NRO_COMPRA:3, COD_PRODUCTO:120) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1322: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:8, NRO_COMPRA:4, COD_PRODUCTO:120) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1331: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:10, NRO_COMPRA:1, COD_PRODUCTO:121) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1332: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:10, NRO_COMPRA:2, COD_PRODUCTO:121) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1333: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:10, NRO_COMPRA:3, COD_PRODUCTO:121) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1334: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:10, NRO_COMPRA:4, COD_PRODUCTO:121) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1372: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:15, NRO_COMPRA:5, COD_PRODUCTO:126) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1373: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:16, NRO_COMPRA:1, COD_PRODUCTO:126) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1382: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:17, NRO_COMPRA:4, COD_PRODUCTO:127) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+Record 1383: Rejected - Error on table PROD_COMPRA.
+ORA-00001: unique constraint (DATABASE20.SYS_C0011983) violated on table DATABASE20.PROD_COMPRA columns (COD_USUARIO, NRO_COMPRA, COD_PRODUCTO)
+ORA-03301: (ORA-00001 details) row with column values (COD_USUARIO:17, NRO_COMPRA:5, COD_PRODUCTO:127) already exists
+Help: https://docs.oracle.com/error-help/db/ora-00001/
+
+
+Table PROD_COMPRA:
+  1360 Rows successfully loaded.
+  23 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 322500 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:          1383
+Total logical records rejected:        23
+Total logical records discarded:        0
+
+Run began on Wed Mar 05 13:32:59 2025
+Run ended on Wed Mar 05 13:34:47 2025
+
+Elapsed time was:     00:01:47.89
+CPU time was:         00:00:00.18

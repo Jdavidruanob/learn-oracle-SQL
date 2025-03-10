@@ -1,0 +1,258 @@
+
+SQL*Loader: Release 23.0.0.0.0 - Production on Wed Mar 5 12:50:42 2025
+Version 23.7.0.25.01
+
+Copyright (c) 1982, 2025, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   usuarios-2.ctl
+Data File:      usuarios-2.csv
+  File processing option string: "str '\r\n'"
+  Bad File:     usuarios-2.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table USUARIO, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+COD_USUARIO                         FIRST     *   ;       CHARACTER            
+    SQL string for column : "usuario_seq.NEXTVAL"
+NOMBRE_USUARIO                       NEXT     *   ;       CHARACTER            
+NOMBRES                              NEXT     *   ;       CHARACTER            
+APELLIDOS                            NEXT     *   ;       CHARACTER            
+CORREO                               NEXT     *   ;       CHARACTER            
+CONTRASENA                           NEXT     *   ;       CHARACTER            
+DIRECCION                            NEXT     *   ;       CHARACTER            
+CIUDAD                               NEXT     *   ;       CHARACTER            
+
+Record 1: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 2: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 3: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 4: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 5: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 13, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 6: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-01400: cannot insert NULL into ("DATABASE20"."USUARIO"."CONTRASENA")
+Help: https://docs.oracle.com/error-help/db/ora-01400/
+
+Record 7: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 13, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 8: Rejected - Error on table USUARIO, column NOMBRE_USUARIO.
+ORA-01400: cannot insert NULL into ("DATABASE20"."USUARIO"."NOMBRE_USUARIO")
+Help: https://docs.oracle.com/error-help/db/ora-01400/
+
+Record 9: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 10: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 11: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 12: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 13: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 14: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 15: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 16: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 13, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 17: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 18: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 19: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 13, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 20: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 21: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 22: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 23: Rejected - Error on table USUARIO, column NOMBRE_USUARIO.
+ORA-01400: cannot insert NULL into ("DATABASE20"."USUARIO"."NOMBRE_USUARIO")
+Help: https://docs.oracle.com/error-help/db/ora-01400/
+
+Record 24: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 25: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 26: Rejected - Error on table USUARIO, column NOMBRE_USUARIO.
+ORA-01400: cannot insert NULL into ("DATABASE20"."USUARIO"."NOMBRE_USUARIO")
+Help: https://docs.oracle.com/error-help/db/ora-01400/
+
+Record 27: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 28: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 29: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 30: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 31: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 32: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 33: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 34: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-01400: cannot insert NULL into ("DATABASE20"."USUARIO"."CONTRASENA")
+Help: https://docs.oracle.com/error-help/db/ora-01400/
+
+Record 35: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 36: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 37: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 38: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 39: Rejected - Error on table USUARIO, column NOMBRE_USUARIO.
+ORA-01400: cannot insert NULL into ("DATABASE20"."USUARIO"."NOMBRE_USUARIO")
+Help: https://docs.oracle.com/error-help/db/ora-01400/
+
+Record 40: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 41: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 42: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 43: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-01400: cannot insert NULL into ("DATABASE20"."USUARIO"."CONTRASENA")
+Help: https://docs.oracle.com/error-help/db/ora-01400/
+
+Record 44: Rejected - Error on table USUARIO, column NOMBRE_USUARIO.
+ORA-01400: cannot insert NULL into ("DATABASE20"."USUARIO"."NOMBRE_USUARIO")
+Help: https://docs.oracle.com/error-help/db/ora-01400/
+
+Record 45: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-01400: cannot insert NULL into ("DATABASE20"."USUARIO"."CONTRASENA")
+Help: https://docs.oracle.com/error-help/db/ora-01400/
+
+Record 46: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 13, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 47: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 48: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 13, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 49: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 15, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+Record 50: Rejected - Error on table USUARIO, column CONTRASENA.
+ORA-12899: value too large for column "DATABASE20"."USUARIO"."CONTRASENA" (actual: 14, maximum: 8)
+Help: https://docs.oracle.com/error-help/db/ora-12899/
+
+
+Table USUARIO:
+  0 Rows successfully loaded.
+  50 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 516000 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:            50
+Total logical records rejected:        50
+Total logical records discarded:        0
+
+Run began on Wed Mar 05 12:50:42 2025
+Run ended on Wed Mar 05 12:51:11 2025
+
+Elapsed time was:     00:00:29.23
+CPU time was:         00:00:00.06

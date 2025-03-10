@@ -1,0 +1,51 @@
+
+SQL*Loader: Release 23.0.0.0.0 - Production on Wed Mar 5 12:43:12 2025
+Version 23.7.0.25.01
+
+Copyright (c) 1982, 2025, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   temaProducto.ctl
+Data File:      temaProductos.csv
+  File processing option string: "str '\r\n'"
+  Bad File:     temaProducto.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table TEMA_PRODUCTO, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+COD_TEMA                            FIRST     *   ;       CHARACTER            
+COD_PRODUCTO                         NEXT     *   ;       CHARACTER            
+
+
+Table TEMA_PRODUCTO:
+  60 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 129000 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:            60
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Wed Mar 05 12:43:12 2025
+Run ended on Wed Mar 05 12:43:19 2025
+
+Elapsed time was:     00:00:07.08
+CPU time was:         00:00:00.09
