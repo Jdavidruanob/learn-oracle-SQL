@@ -62,8 +62,7 @@ GROUP BY anio, c.nombre;
 SELECT e.producto, p.descripcion
 FROM DATABASE35.eliminados e
 JOIN DATABASE35.producto p ON e.producto = p.idProducto
-GROUP BY e.producto, p.descripcion
-HAVING COUNT(*) > 7;
+GROUP BY e.producto, p.descripcion;
 
 -- 9. Usuarios que en algún año compraron más de $10,000 en total
 SELECT u.nombres, u.apellidos
