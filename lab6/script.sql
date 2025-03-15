@@ -12,10 +12,6 @@ FROM usuario
 WHERE nombres = 'Pedro' AND apellidos = 'Ramos';
 
 -- 2
--- Actualice las compras del 15 de diciembre del 2024,
--- cambie dirEntrega y ciudadEntrega por la dirección y 
--- ciudad del usuario que realizó la compra.
-
 DESC COMPRA;
 SELECT *
 FROM COMPRA
@@ -37,19 +33,105 @@ SET CU.DIR_ENTREGA = CU.DIRECCION,
     CU.CIUDAD_ENTREGA = CU.CIUDAD;
 
 COMMIT;
+
 -- 3
--- Borre del carrito de compras del usuario Camila Garcia el producto Auriculares con orejas de gato
--- cambiar 
 DESC CARRITO_COMPRAS;
-DELETE FROM CARRIT_COMPRAS
-WHERE COD_USUARIO = (
+DESC USUARIO;
+DESC PRODUCTO;
+
+DELETE FROM CARRITO_COMPRAS
+WHERE COD_USUARIO IN (
     SELECT COD_USUARIO
     FROM USUARIO
     WHERE NOMBRES = 'Camila' AND APELLIDOS = 'Garcia'
 )
-AND COD_PRODUCTO = (
-    SELECT COD
+AND COD_PRODUCTO IN (
+    SELECT ID_PRODUCTO
     FROM PRODUCTO
-    WHERE NOMBRE = 'Auriculares con orejas de gato'
+    WHERE DESCRIPCION = 'Auriculares con orejas de gato'
 );
+
+-- 4
+ALTER TABLE producto
+RENAME COLUMN categoria TO cod_categoria;
+
+-- 5
+-- a) 
+ALTER TABLE compra
+MODIFY ciudad_entrega NUMBER(3) NOT NULL;
+
+-- b) 
+ALTER TABLE producto
+MODIFY cantidad_inv DEFAULT 0;
+
+-- c) 
+ALTER TABLE prod_compra
+ADD CONSTRAINT chk_cantidad CHECK (cantidad > 0);
+
+-- 6
+ALTER TABLE producto
+ADD peso NUMBER(3) DEFAULT 1 CHECK (peso > 0);
+
+COMMIT;
+
+-- 7. 
+
+-- Agregar el nuevo campo id_compra como IDENTITY
+ALTER TABLE compra
+ADD id_compra NUMBER(5) GENERATED ALWAYS AS IDENTITY;
+
+--  Crear una tabla temporal para mantener la relación entre la vieja y nueva PK
+CREATE TABLE temp_compra AS
+SELECT id_compra, cod_usuario, nro_compra
+FROM compra;
+
+-- Actualizar prod_compra para agregar el nuevo campo
+ALTER TABLE prod_compra
+ADD id_compra NUMBER(5);
+
+--  Actualizar los valores en prod_compra
+UPDATE prod_compra pc
+SET pc.id_compra = (
+    SELECT tc.id_compra 
+    FROM temp_compra tc 
+    WHERE tc.cod_usuario = pc.cod_usuario 
+    AND tc.nro_compra = pc.nro_compra
+);
+
+-- Eliminar las restricciones existentes
+ALTER TABLE prod_compra
+DROP CONSTRAINT FK_PROD_COMPRA_COMPRA;
+
+ALTER TABLE prod_compra
+DROP PRIMARY KEY;
+
+ALTER TABLE compra
+DROP PRIMARY KEY;
+
+--  Crear las nuevas claves primarias
+ALTER TABLE compra
+ADD CONSTRAINT PK_COMPRA PRIMARY KEY (id_compra);
+
+ALTER TABLE prod_compra
+ADD CONSTRAINT PK_PROD_COMPRA PRIMARY KEY (id_compra, cod_producto);
+
+-- Crear la nueva clave foránea
+ALTER TABLE prod_compra
+ADD CONSTRAINT FK_PROD_COMPRA_COMPRA 
+FOREIGN KEY (id_compra) REFERENCES compra(id_compra);
+
+-- Eliminar las columnas antiguas de prod_compra que ya no se necesitan
+ALTER TABLE prod_compra
+DROP COLUMN cod_usuario;
+
+ALTER TABLE prod_compra
+DROP COLUMN nro_compra;
+
+-- Verificar la integridad de los datos
+SELECT COUNT(*) FROM compra;
+SELECT COUNT(*) FROM prod_compra;
+
+
+
+
 
