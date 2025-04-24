@@ -130,8 +130,3 @@ DROP COLUMN nro_compra;
 -- Verificar la integridad de los datos
 SELECT COUNT(*) FROM compra;
 SELECT COUNT(*) FROM prod_compra;
-
-
-
-
-
