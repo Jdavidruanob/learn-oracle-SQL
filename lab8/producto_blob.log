@@ -1,0 +1,61 @@
+
+SQL*Loader: Release 23.0.0.0.0 - Production on Fri Apr 25 08:52:31 2025
+Version 23.7.0.25.01
+
+Copyright (c) 1982, 2025, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   producto_blob.ctl
+Data File:      productos_con_imagen.csv
+  File processing option string: "str '\r\n'"
+  Bad File:     producto_blob.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 1
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table PRODUCTO, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+ID_PRODUCTO                         FIRST     *   ;       CHARACTER            
+DESCRIPCION                          NEXT   100   ;       CHARACTER            
+IMAGEN                            DERIVED     *  EOF      CHARACTER            
+    Dynamic LOBFILE.  Filename in field IMG
+IMG                                  NEXT   255   ;       CHARACTER            
+  (FILLER FIELD)
+LARGO                                NEXT     *   ;       CHARACTER            
+ALTO                                 NEXT     *   ;       CHARACTER            
+ANCHO                                NEXT     *   ;       CHARACTER            
+CANTIDAD_INV                         NEXT     *   ;       CHARACTER            
+PRECIO                               NEXT     *   ;       CHARACTER            
+COD_CATEGORIA                        NEXT    50   ;       CHARACTER            
+
+
+Table PRODUCTO:
+  5 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 490000 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          1
+Total logical records read:             5
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Fri Apr 25 08:52:31 2025
+Run ended on Fri Apr 25 08:52:44 2025
+
+Elapsed time was:     00:00:12.22
+CPU time was:         00:00:00.19

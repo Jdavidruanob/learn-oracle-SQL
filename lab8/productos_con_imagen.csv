@@ -1,0 +1,6 @@
+idProducto;desc;img;largo;alto;ancho;caninv;precio;categoria
+156;Figura de Spider-Man;imagenes/spiderman.jpg;30;40;20;10;25000;10
+157;Libro de El Señor de los Anillos;imagenes/lotr.jpg;21;30;5;15;32000;6
+158;Lego Batimovil;imagenes/batmobile.jpg;45;25;20;5;110000;8
+159;Puzzle de 1000 piezas;imagenes/rompecabezas.jpg;40;30;5;7;18000;5
+160;Taza de Groot;imagenes/groot.jpg;10;12;8;12;8000;1
