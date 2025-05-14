@@ -1,4 +1,4 @@
-/* -- Laboratorio 10 PL/SQL Records & explicit cursors
+-- Laboratorio 10 PL/SQL Records & explicit cursors
 -- Jose David Ruano Burbano  8982982
 
 -- 1
@@ -62,7 +62,7 @@ CREATE OR REPLACE TYPE t_producto_vendido_record AS OBJECT (
 );
 /
 CREATE OR REPLACE TYPE t_productos_vendidos_table AS TABLE OF t_producto_vendido_record;
-/ */
+/
 
 CREATE OR REPLACE FUNCTION obtener_productos_fibonacci (p_categoria_nombre IN VARCHAR2)
 RETURN t_productos_vendidos_table
@@ -157,20 +157,20 @@ BEGIN
             UPDATE usuario
             SET nivel = v_usuario_venta.nivel + 5
             WHERE CURRENT OF cur_usuarios_ventas;
-        ELSIF v_contador <= 5 THEN -- Usuarios 3, 4 y 5
+        ELSIF v_contador <= 5 THEN 
             UPDATE usuario
             SET nivel = v_usuario_venta.nivel + 3
             WHERE CURRENT OF cur_usuarios_ventas;
-        ELSIF v_contador <= 9 THEN -- Usuarios 6, 7, 8 y 9
+        ELSIF v_contador <= 9 THEN 
             UPDATE usuario
             SET nivel = v_usuario_venta.nivel + 2
             WHERE CURRENT OF cur_usuarios_ventas;
         ELSE
-            EXIT; -- Dejamos de actualizar después de los 9 usuarios
+            EXIT; 
         END IF;
     END LOOP;
     CLOSE cur_usuarios_ventas;
-    COMMIT; -- Importante: guardar los cambios
+    COMMIT; 
 END;
 /
 EXEC actualizar_nivel_usuarios;
